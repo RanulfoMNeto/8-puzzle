@@ -6,14 +6,15 @@ EMPTY = 0 # Represents the value indicating an empty tile in the puzzle state.
 
 def find_index(state, value):
     """
-    Finds the coordinates of the empty tile (represented by EMPTY) in the puzzle state.
+    Finds the (row, column) index of a specific value in the puzzle state.
 
     Args:
     - state (list of list): Current state of the puzzle.
+    - value (int): Value to search for in the puzzle state.
 
     Returns:
-    - tuple or None: Coordinates (row, column) of the empty tile if found,
-      or None if the empty tile is not present in the state.
+    - tuple or None: (row, column) index of the value if found,
+      or None if the value is not present in the state.
     """
     size = len(state)
     for i in range(size):
